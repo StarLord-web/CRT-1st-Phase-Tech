@@ -44,6 +44,7 @@ using namespace std;
 
 int main() {
     int side1, side2, side3;
+    cout<<"Enter the sides: "<<endl;
     cin >> side1 >> side2 >> side3;
     
     bool isEqui = (side1 > 0) && (side1 == side2) && (side2 == side3);
@@ -51,3 +52,24 @@ int main() {
     return 0;
     
 }
+
+//  PROBLEM 04: BITWISE LEFT/RIGHT SHIFT OPERATORS 
+//  Task: show multiplication and division 
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int a,b;
+    cout<<"Enter numbers:"<<endl;
+    cin>>a>>b;
+
+    int resultA = a << 2;
+    int resultB = b >> 1;
+
+    cout<<"a*4= "<<resultA<<endl;
+    cout<<"a/2= "<<resultB<<endl;
+
+return 0;
+}
+
