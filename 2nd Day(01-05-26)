@@ -45,27 +45,31 @@ int main() {
 }
 
 //  PROBLEM 03: NESTED IF-ELSE LOGIC 
-//  Task: Advanced validation for seniors and invalid ages
+//  Task: Take a percentage input and designate a grade to it
 
 #include <iostream>
 using namespace std;
 
 int main() {
-    int age;
-    cin >> age;
+    int per;
+    cin >> per;
     
-    if(age >= 18) {
-        if (age >= 100) {
-            cout <<"Eligible for Vote (But we are Super senior citizen";
-        } else {
-            cout <<"Eligible for Vote";
+    if(per >= 60) {
+        if (per >= 70) {
+            if(per >= 80){
+                if(per >= 90){
+                    cout<<"A"<<endl;
+                }else{
+                    cout<<"B"<<endl;
+                } 
+            }else {
+                cout<<"C"<<endl;
+                }
+        }else {
+            cout<<"D"<<endl;
         }
-    } else {
-        if(age < 0) {
-            cout << "Enter a Valid Age number";
-        } else {
-            cout << "Not Eligible for Vote";
-        }
+    }else {
+        cout<<"F"<<endl;
     }
     return 0;
 }
@@ -84,5 +88,26 @@ cin>>a>>b;
 (a>b) ? cout<<"a is greater" : cout<<"b is greater";
 
 
+return 0;
+}
+
+//  PROBLEM 05: FOR LOOP 
+//  Task: print 1 to n and skip any num divisible by 4
+
+#include<iostream>
+using namespace std;
+
+int main(){
+int n;
+cout<<"Enter number: ";
+cin>>n;
+
+for(int i=1; i<=n; i++){
+    if(i%4==0){
+        continue;
+    } else{
+        cout<<i<<" ";
+    }
+}
 return 0;
 }
