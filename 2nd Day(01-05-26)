@@ -138,3 +138,58 @@ if(year%4 == 0){
     } 
 return 0;
 }
+
+//  PROBLEM 07: NESTED IF-ELSE LOGIC 
+//  Task: Take a alphabet and check whether it is vowel or consonent
+
+#include<iostream>
+using namespace std;
+
+int main(){
+char alp;
+cout<<"Enter a alphaber: ";
+cin>>alp;
+
+if((alp >= 'a')&&(alp <= 'z') || (alp >= 'A' && alp <= 'Z')){
+        if(alp=='A' || alp=='a' || alp=='E' || alp=='e' ||
+           alp=='I' || alp=='i' || alp=='O' || alp=='o' ||
+           alp=='U' || alp=='u'){
+        cout<<"It is a Vowel";
+    } else {
+        cout<<"It is a consonent";
+    }
+}
+return 0;
+}
+
+//  PROBLEM 08: SWITCH CASE LOGIC 
+//  Task: Take input and print message accordingly
+
+#include<iostream>
+using namespace std;
+
+int main(){
+char call;
+cout<<"Press : ";
+cin>>call;
+
+switch (call)
+{
+case '1':
+    cout<<"For Support";
+    break;
+case '2':
+    cout<<"For Billing";
+    break;
+case '3':
+    cout<<"For Technical issue";
+    break;
+case '0':
+    cout<<"To speak with agent";
+    break;
+
+default:
+    break;
+}
+return 0;
+}
