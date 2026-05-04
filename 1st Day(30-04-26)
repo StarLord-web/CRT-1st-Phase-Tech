@@ -54,7 +54,7 @@ int main() {
 }
 
 //  PROBLEM 04: BITWISE LEFT/RIGHT SHIFT OPERATORS 
-//  Task: show multiplication and division 
+//  Task: Show multiplication and division 
 
 #include<iostream>
 using namespace std;
@@ -73,3 +73,47 @@ int main(){
 return 0;
 }
 
+//  PROBLEM 05: Arithmetic operations
+//  Task: get number and operator sign
+
+#include<iostream>
+using namespace std;
+
+int main(){
+char sign;
+cout<<"Enter arithmetic operator: ";
+cin>>sign;
+
+int num1,num2;
+cout<<"Enter Numbers: "<<endl;
+cin>>num1>>num2;
+int result = 0;
+
+switch (sign)
+{
+case '+':
+    result = num1 + num2;
+    cout<<"num1 + num2 = "<<result;
+    break;
+case '-':
+    result = num1 - num2;
+    cout<<"num1 - num2 = "<<result;
+    break;
+case '*':
+    result = num1 * num2;
+    cout<<"num1 * num2 = "<<result;
+    break;
+case '/':
+    if(num2!=0){
+    result = num1 / num2;
+    cout<<"num1 / num2 = "<<result;
+    break;
+    }
+
+default:
+    break;
+}
+
+
+return 0;
+}
