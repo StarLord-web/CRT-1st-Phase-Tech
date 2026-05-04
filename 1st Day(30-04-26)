@@ -117,3 +117,62 @@ default:
 
 return 0;
 }
+
+//  PROBLEM 06: THE SWAP LOGIC 
+//  Task: Exchange values using a temporary variable
+
+#include<iostream>
+using namespace std;
+
+int main(){
+int a,b;
+cout<<"Enter numbers: "<<endl;
+cin>>a>>b;
+
+int temp;
+temp = a;
+a = b;
+b = temp;
+
+cout<<a<<" "<<b;
+return 0;
+}
+
+//  PROBLEM 07: SUM & AVERAGE 
+//  Task: Calculate total and mean of 3 numbers
+
+#include<iostream>
+using namespace std;
+
+int main(){
+int a,b,c;
+cout<<"Enter numbers: "<<endl;
+cin>>a>>b>>c;
+
+int sum = a + b + c;
+int mean = (sum)/2;
+
+cout<<"Sum = "<<sum<<endl;
+cout<<"Average = "<<mean;
+return 0;
+}
+
+//  PROBLEM 08: LOGIN CREDENTIALS 
+//  Task: Verify ID and Password with logic gates
+
+#include<iostream>
+using namespace std;
+
+int main(){
+int userId = 2004;
+int userpass = 8989;
+
+int inputId, inputpass;
+cin>>inputId>>inputpass;
+
+bool isGranted = (userId == inputId) && (userpass == inputpass);
+
+cout<<"Access Granted"<< isGranted<<endl;
+cout<<"Access Denied"<< !isGranted<<endl;
+return 0;
+}
