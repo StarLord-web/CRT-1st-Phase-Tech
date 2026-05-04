@@ -172,7 +172,7 @@ cin>>inputId>>inputpass;
 
 bool isGranted = (userId == inputId) && (userpass == inputpass);
 
-cout<<"Access Granted"<< isGranted<<endl;
-cout<<"Access Denied"<< !isGranted<<endl;
+cout<<"Access Granted "<< isGranted<<endl;
+cout<<"Access Denied "<< !isGranted<<endl;
 return 0;
 }
