@@ -72,16 +72,19 @@ return 0;
 #include<iostream>
 using namespace std;
 
+//discount func
+void discount(float &bill){
+    bill = bill * 0.9;
+    
+}
+
 int main(){
-float cost;
-cout<<"Enter cost: ";
-cin>>cost;
+float bill;
+cout<<"Enter bill: ";
+cin>>bill;
 
-float *ptr = &cost;
+discount(bill);
+cout<<"Discounted Bill: "<<bill;
 
-//using 10% discount
-
-*ptr = cost - (0.1 * cost);
-cout<<"Cost with 10% discount: "<< cost;
 return 0;
 }
