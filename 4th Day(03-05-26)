@@ -36,7 +36,7 @@ for(int i = 0; i<n; i++){
 return 0;
 }
 
-//  PROBLEM 04: PATTERN FORMATION
+//  PROBLEM 03: PATTERN FORMATION
 //  Task: Mirrored Right Angled triangle (*) pattern 
 
 #include<iostream>
@@ -58,7 +58,7 @@ for(int i = 0; i<n; i++){
 return 0;
 }
 
-//  PROBLEM 05: PATTERN FORMATION
+//  PROBLEM 04: PATTERN FORMATION
 //  Task: Boundary formation (*) pattern 
 
 #include<iostream>
@@ -78,6 +78,32 @@ for(int i = 0; i<n; i++){
             cout<<" ";
         }
     }
+    cout<<endl;
+}
+return 0;
+}
+
+//  PROBLEM 05: PATTERN FORMATION
+//  Task: pyramid (*) pattern 
+
+#include<iostream>
+using namespace std;
+
+int main(){
+int n;
+cout<<"Enter number: ";
+cin>>n;
+//Outer loop
+for(int i = 1; i<n; i++){
+    // Space Inner loop
+    for(int j = n; j<=1; j--){
+        cout<<" ";
+    }
+    // Star Inner loop
+    for(int k = i; k <= 1; k--){
+        cout<<"*";
+    }
+    
     cout<<endl;
 }
 return 0;
