@@ -1,0 +1,19 @@
+// -----------------------------------Functions------------------------------------
+
+//  PROBLEM 01: BASIC FUNCTION
+//  Task: write a message function and call it
+
+#include<iostream>
+using namespace std;
+
+//Message Function
+void printMsg(){
+    cout<<"Hello everyone, I'm king Arthur";
+}
+
+int main(){
+//function call
+printMsg();
+
+return 0;
+}
