@@ -44,3 +44,44 @@ cout<<cokeVol1(bottles)<<endl;
 cokeVol2(bottles);
 return 0;
 }
+
+// -----------------------------------Pointers------------------------------------
+
+//  PROBLEM 03: USING POINTER
+//  Task: show basic pointer usage 
+
+#include<iostream>
+using namespace std;
+
+int main(){
+int value = 101;
+int *ptr = &value;
+
+cout<<"Value : "<<*ptr<<endl;
+cout<<"Address : "<<ptr<<endl;
+
+*ptr = 2000;
+cout<<"Value : "<<*ptr<<endl;
+cout<<"Address : "<<ptr<<endl;
+return 0;
+}
+
+//  PROBLEM 04: USING POINTER
+//  Task: WAP that applies 10% discount using reference update the cost
+
+#include<iostream>
+using namespace std;
+
+int main(){
+float cost;
+cout<<"Enter cost: ";
+cin>>cost;
+
+float *ptr = &cost;
+
+//using 10% discount
+
+*ptr = cost - (0.1 * cost);
+cout<<"Cost with 10% discount: "<< cost;
+return 0;
+}
