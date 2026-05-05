@@ -17,3 +17,30 @@ printMsg();
 
 return 0;
 }
+
+//  PROBLEM 02: BASIC FUNCTION
+//  Task: Take number of coke bottles and print the total volume of the all the bottles combined
+
+#include<iostream>
+using namespace std;
+// With argument and return type
+int cokeVol1(int bottles){
+    cout<<"with return type func"<<endl;
+    return bottles * 750;
+}
+
+// With argument and without return type
+void cokeVol2(int bottles){
+    cout<<"withour return type func"<<endl;
+    cout<<"Total volume: "<< bottles * 750;
+}
+
+int main(){
+int bottles;
+cout<<"Enter number of coke bottles: ";
+cin>>bottles;
+
+cout<<cokeVol1(bottles)<<endl;
+cokeVol2(bottles);
+return 0;
+}
