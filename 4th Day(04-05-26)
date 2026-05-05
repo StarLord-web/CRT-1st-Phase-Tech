@@ -1,0 +1,99 @@
+//  PROBLEM 01: PATTERN FORMATION
+//  Task: full block (*) pattern
+
+#include<iostream>
+using namespace std;
+
+int main(){
+int n;
+cin>>n;
+
+for(int i = 0; i<n-1; i++){
+    for(int j = 0; j<n; j++){
+        cout<<"*";
+    }
+    cout<<endl;
+}
+return 0;
+}
+
+//  PROBLEM 02: PATTERN FORMATION
+//  Task: Right Angled triangle (*) pattern
+
+#include<iostream>
+using namespace std;
+
+int main(){
+int n;
+cin>>n;
+
+for(int i = 0; i<n; i++){
+    for(int j = 0; j<=i; j++){
+        cout<<"*";
+    }
+    cout<<endl;
+}
+return 0;
+}
+
+//  PROBLEM 03: PATTERN FORMATION
+//  Task: Mirrored Right Angled triangle (*) pattern 
+
+#include<iostream>
+using namespace std;
+
+int main(){
+int n;
+cin>>n;
+
+for(int i = 0; i<n; i++){
+    for(int j = 0; j<n-i; j++){
+        cout<<" ";
+    }
+    for(int j = 0; j<=i; j++){
+        cout<<"*";
+    }
+    cout<<endl;
+}
+return 0;
+}
+
+//  PROBLEM 04: PATTERN FORMATION
+//  Task: Boundary formation (*) pattern 
+
+#include<iostream>
+using namespace std;
+
+int main(){
+int n;
+cout<<"Enter number: ";
+cin>>n;
+//Outer loop
+for(int i = 0; i<n; i++){
+    // Inner loop
+    for(int j = 0; j<n; j++){
+        if(i==0 || i==n-1 || j==0 || j==n-1){
+            cout<<"*";
+        } else {
+            cout<<" ";
+        }
+    }
+    cout<<endl;
+}
+return 0;
+}
+
+//  PROBLEM 05: PATTERN FORMATION
+//  Task: pyramid (*) pattern 
+
+#include<iostream>
+using namespace std;
+
+int main(){
+int n;
+cout<<"Enter number: ";
+cin>>n;
+
+return 0;
+}
+
