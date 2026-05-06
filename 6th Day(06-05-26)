@@ -61,3 +61,42 @@ s1.print();
 
 return 0;
 }
+
+// PROBLEM 03 - FUNCTION OVERLOADING(Constructors)
+// Task - create two member functions(constructors) with same name but different parameters
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+class Student{
+    //Access Specifier
+private:
+//Data members
+string name;
+int rollno;
+public: 
+    //No Parameter Constructor
+    Student(){
+        cout<<"Roll no : 0" <<endl;
+        cout<<"Enter you name!!!" <<endl;
+    }
+    //Parameterized Constructor
+    Student(string name, int rollno){
+        this->name = name;
+        this->rollno = rollno;
+    }
+    //Member Function
+    void print(){      // no argument no return type
+        cout<<"Name: "<<name<<"\nRoll no. : "<<rollno;
+    }
+};
+
+int main(){
+    // Student s1;
+Student s1("Rajasahab",2020);
+
+s1.print();
+
+return 0;
+}
