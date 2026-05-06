@@ -7,7 +7,7 @@
 #include<string>
 using namespace std;
 
-class Student{
+class Students{
     //Access Specifier
 public: 
     //Data members
@@ -20,11 +20,44 @@ public:
 };
 
 int main(){
-    Student std;
+    Students std;
     string name;
     int rollno;
     std.name = "Krishna";
     std.roll_no = 21;
     std.print();
+return 0;
+}
+
+// PROBLEM 02 - STUDENT CLASS
+// Task - Using a CONSTRUCTOR, Make a student class and print the student's name and roll no.
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+class Student{
+    //Access Specifier
+private:
+//Data members
+string name;
+int rollno;
+public: 
+    //Parameterized Constructor
+    Student(string name, int rollno){
+        this->name = name;
+        this->rollno = rollno;
+    }
+    //Member Function
+    void print(){      // no argument no return type
+        cout<<"Name: "<<name<<"\nRoll no. : "<<rollno;
+    }
+};
+
+int main(){
+Student s1("Rajasahab",2020);
+
+s1.print();
+
 return 0;
 }
