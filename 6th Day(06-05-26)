@@ -1,0 +1,30 @@
+//----------------------------------CLASSES---------------------------------------------
+
+// PROBLEM 01 - STUDENT CLASS
+// Task - Make a student class and print the student's name and roll no.
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+class Student{
+    //Access Specifier
+public: 
+    //Data members
+    string name;
+    int roll_no;
+    //Member Function
+    void print(){      // no argument no return type
+        cout<<"Name: "<<name<<"\nRoll no. : "<<roll_no;
+    }
+};
+
+int main(){
+    Student std;
+    string name;
+    int rollno;
+    std.name = "Krishna";
+    std.roll_no = 21;
+    std.print();
+return 0;
+}
