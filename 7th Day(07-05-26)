@@ -1,0 +1,117 @@
+//--------------------------------------INHERITANCE-------------------------------------
+
+// PROBLEM 01 - SINGLE INHERITANCE
+// Task - show inheritance using sports class and cricket sub-class which inherits
+
+#include<iostream>
+using namespace std;
+
+class Sports{
+    public:
+    void show(){
+        cout<<"Sports Type!!!";
+    }
+};
+
+class Cricket : public Sports{
+    
+};
+
+int main(){
+    Cricket c1;
+    c1.show();
+return 0;
+}
+
+// PROBLEM 02 - MULTILEVEL INHERITANCE
+// Task - show inheritance using sports class , cricket sub-class which inherits sports class 
+// and another player class which inherits cricket class
+
+#include<iostream>
+using namespace std;
+
+class Sports{
+    public:
+    void show(){
+        cout<<"Sports Type!!!";
+    }
+};
+
+class Cricket : public Sports{
+    public:
+    void show(){
+    cout<<"cricket";
+    }
+};
+
+class Player : public Cricket{
+
+};
+
+int main(){
+    Player p1;
+    p1.show();
+return 0;
+}
+
+// PROBLEM 03 - MULTIPLE INHERITANCE
+// Task - show inheritance using sports class , cricket class 
+// which gets inherited by player class 
+
+#include<iostream>
+using namespace std;
+
+class Sports{
+    public:
+    void show1(){
+        cout<<"Sports Type!!!"<<endl;
+    }
+};
+
+class Cricket {
+    public:
+    void show2(){
+    cout<<"cricket"<<endl;
+    }
+};
+
+class Player : public Sports,public Cricket{
+
+};
+
+int main(){
+    Player p1;
+    p1.show1();
+    p1.show2();
+return 0;
+}
+
+// PROBLEM 04 - HIERARCHICAL INHERITANCE
+// Task - show inheritance using sports class ,
+// which gets inherited by Cricket class and player class 
+
+#include<iostream>
+using namespace std;
+
+class Sports{
+    public:
+    void show1(){
+        cout<<"Sports Type!!!"<<endl;
+    }
+};
+
+class Cricket : public Sports{
+
+};
+
+class Player : public Sports{
+
+};
+
+int main(){
+    Player p1;
+    Cricket c1;
+    p1.show1();
+    c1.show1();
+return 0;
+}
