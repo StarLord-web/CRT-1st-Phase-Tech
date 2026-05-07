@@ -100,3 +100,132 @@ s1.print();
 
 return 0;
 }
+
+// PROBLEM 04 - FUNCTION OVERLOADING(Constructors)
+// Task - Create a student management system store and display student details-
+//        name, roll no, email id, phone no, batch, class name- Crt
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+class StdManagement{
+    private:
+    string name, email_Id, batch, className;
+    int roll_no;
+    string phone_no;
+
+    public:
+    // default constructor
+        StdManagement() {
+        name = "Not Assigned";
+        roll_no = 0;
+        email_Id = "Not Available";
+        phone_no = "No Contact";
+        batch = "Not Assigned";
+        className = "Not Assigned";
+    }
+    // constructor with all parameters 
+    StdManagement(string a, int x, string b , string y, string c, string d){
+        name = a;
+        roll_no = x;
+        email_Id = b;
+        phone_no = y;
+        batch = c;
+        className = d;
+    }
+
+        // Function to display student details
+    void display() {
+        cout << "\n------ Student Details ------" << endl;
+        cout << "Name       : " << name << endl;
+        cout << "Roll No    : " << roll_no << endl;
+        cout << "Email ID   : " << email_Id << endl;
+        cout << "Phone No   : " << phone_no << endl;
+        cout << "Batch      : " << batch << endl;
+        cout << "Class Name : " << className << endl;
+    }
+};
+
+int main(){
+    StdManagement s1;
+    
+    StdManagement s2("Rajaghosh", 1021, "rajaghosh219@gmail.com", "9833324512","14_E","VIB_402");
+
+    s1.display();
+    s2.display();
+
+
+return 0;
+}
+
+// PROBLEM 05 - FUNCTION OVERLOADING(Constructors)
+// Task - Create a student management system store and display student details-
+//        name, roll no, email id, phone no, batch, class name- Crt
+//        **Using a Copy Constructor**
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+class StdManagement{
+    private:
+    string name, email_Id, batch, className;
+    int roll_no;
+    string phone_no;
+
+    public:
+    // default constructor
+        StdManagement() {
+        name = "Not Assigned";
+        roll_no = 0;
+        email_Id = "Not Available";
+        phone_no = "No Contact";
+        batch = "Not Assigned";
+        className = "Not Assigned";
+    }
+    // constructor with all parameters 
+    StdManagement(string a, int x, string b , string y, string c, string d){
+        name = a;
+        roll_no = x;
+        email_Id = b;
+        phone_no = y;
+        batch = c;
+        className = d;
+    }
+
+    //Copy Constructor
+    StdManagement(const StdManagement &s){
+        name = s.name;
+        roll_no = s.roll_no;
+        email_Id = s.email_Id;
+        phone_no = s.phone_no;
+        batch = s.batch;
+        className = s.className;
+    }
+
+        // Function to display student details
+    void display() {
+        cout << "\n------ Student Details ------" << endl;
+        cout << "Name       : " << name << endl;
+        cout << "Roll No    : " << roll_no << endl;
+        cout << "Email ID   : " << email_Id << endl;
+        cout << "Phone No   : " << phone_no << endl;
+        cout << "Batch      : " << batch << endl;
+        cout << "Class Name : " << className << endl;
+    }
+};
+
+int main(){
+    StdManagement s1;
+    
+    StdManagement s2("Rajaghosh", 1021, "rajaghosh219@gmail.com", "9833324512","14_E","VIB_402");
+
+    StdManagement s3 = s2;
+    s1.display();
+    s2.display();
+    s3.display();
+
+
+return 0;
+}
