@@ -86,32 +86,72 @@ int main(){
 return 0;
 }
 
-// PROBLEM 04 - HIERARCHICAL INHERITANCE
-// Task - show inheritance using sports class ,
-// which gets inherited by Cricket class and player class 
+// PROBLEM 05 - VIRTUAL FUNCTION (Optional Overriding)
+// Task - Show overriding using virtual func 
 
 #include<iostream>
 using namespace std;
 
-class Sports{
+class Animal{
     public:
-    void show1(){
-        cout<<"Sports Type!!!"<<endl;
+    //Virtual Function
+    virtual void sound(){
+        cout<<"Animal Sound"<<endl;
     }
 };
 
-class Cricket : public Sports{
-
+class Dog : public Animal{
+    public:
+    //Function Overriding
+    void sound(){
+        cout<<"Dog Barks"<<endl;
+    }
 };
 
-class Player : public Sports{
+class Cat : public Animal{
 
 };
 
 int main(){
-    Player p1;
-    Cricket c1;
-    p1.show1();
-    c1.show1();
+    Dog p1;
+    Cat c1;
+    p1.sound();
+    c1.sound();
+return 0;
+}
+
+// PROBLEM 06 - PURE VIRTUAL FUNCTION (Compulsory Overriding)
+// Task - Show overriding using pure virtual func 
+
+#include<iostream>
+using namespace std;
+
+class Animal{
+    public:
+    //Pure Virtual Function
+    virtual void sound() = 0;
+};
+
+class Dog : public Animal{
+    public:
+    //Function Overriding(Compulsory)
+    void sound(){
+        cout<<"Dog Barks"<<endl;
+    }
+};
+
+class Cat : public Animal{
+    public:
+    //Function Overriding(Compulsory)
+    void sound(){
+        cout<<"Cat Meows"<<endl;
+    }
+};
+
+int main(){
+    Dog p1;
+    Cat c1;
+    p1.sound();
+    c1.sound();
 return 0;
 }
