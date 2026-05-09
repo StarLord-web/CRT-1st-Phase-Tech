@@ -1,0 +1,109 @@
+
+    // PROBLEM 01 - ABSTRACTION
+    // Task - Show abstraction using classes to hide unnecessary complexity from user
+
+    #include<iostream>
+    using namespace std;
+
+    class ATM   {
+        //NO Encapsulation but there is abstraction
+        public:
+        int balance;
+        ATM(){
+            balance = 50000;
+        }
+        //Hidden Complexity (Data hidden from user)
+        void withdraw(int amount){
+            if(amount>balance){
+                cout<<"Insufficient Balance"<<endl;
+            } else {
+                balance -= amount;
+                cout<<"Withdrawal Successful"<<endl;
+            }
+        }
+        void showBalance(){
+            cout<<"Current Balance: "<<balance<<endl;
+        }
+    };
+
+    int main(){
+        ATM a;
+        //Abstraction takes place as there is hidden complexity from user
+        a.withdraw(20000);
+        a.showBalance();
+    return 0;
+    }
+
+    // PROBLEM 02 - ENCAPSULATION
+    // Task - Show encapsulation using protected data in classes which cannot be tempered by user
+
+    #include<iostream>
+    using namespace std;
+
+    class ATM   {
+        //Yes Encapsulation and there is also abstraction
+        private:
+        int balance;
+        
+        public:
+        ATM(){
+            balance = 50000;
+        }
+        //Hidden Complexity (Data hidden from user)
+        void withdraw(int amount){
+            if(amount>balance){
+                cout<<"Insufficient Balance"<<endl;
+            } else {
+                balance -= amount;
+                cout<<"Withdrawal Successful"<<endl;
+            }
+        }
+        void showBalance(){
+            cout<<"Current Balance: "<<balance<<endl;
+        }
+    };
+
+    int main(){
+        ATM a;
+        //Abstraction takes place as there is hidden complexity from user
+        a.withdraw(20000);
+        a.showBalance();
+    return 0;
+    }
+
+// PROBLEM 03 - FRIEND FUNCTION
+// Task - using friend function give permission for usage of class variables
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+class Cars{
+    private:
+    int a;
+    public:
+    //Declare friend func
+    friend void add(Cars c);
+
+};
+
+//Define Friend func
+//Using friend function to access private data members outside the class
+void add(Cars c){
+    int input;
+    cout<<"Enter no. of cars"<<endl;
+    cin>>input;
+    c.a = input;
+    c.a+=10;
+    cout<<c.a;
+}
+
+int main(){
+    //Objection Creation
+    Cars ac;
+    //Function calling 
+    add(ac);
+
+return 0;
+}
+
